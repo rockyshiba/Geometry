@@ -25,6 +25,7 @@ namespace Geometry.UnitTests
 
             // Expectations
             Assert.That(square_area, Is.EqualTo(4));
+            Assert.That(square_area, Is.Not.EqualTo(4));
         }
     }
 }
