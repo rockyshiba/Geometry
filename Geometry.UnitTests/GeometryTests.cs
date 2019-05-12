@@ -12,7 +12,7 @@ namespace Geometry.UnitTests
     public class GeometryTests
     {
         [Test]
-        public void Area_WhenCalled_ReturnsArea()
+        public void SquareArea_WhenCalled_ReturnsArea()
         {
             // Setup
             Square square = new Square()
@@ -26,6 +26,24 @@ namespace Geometry.UnitTests
             // Expectations
             Assert.That(square_area, Is.EqualTo(4));
             Assert.That(square_area, Is.Not.EqualTo(4));
+        }
+
+        [Test]
+        public void RectangleArea_WhenCalled_ReturnsArea()
+        {
+            // Setup
+            Rectangle rectangle = new Rectangle()
+            {
+                Length = 5,
+                Side = 2
+            };
+
+            // Execution
+            int rectangle_area = rectangle.Area();
+
+            // Expectations
+            Assert.That(rectangle_area, Is.EqualTo(10));
+            Assert.That(rectangle_area, Is.Not.EqualTo(3));
         }
     }
 }

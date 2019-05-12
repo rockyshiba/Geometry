@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Geometry
 {
-    class Rectangle
+    public class Rectangle
     {
         public int Length { get; set; }
         public int Side { get; set; }
