@@ -16,7 +16,7 @@ namespace Geometry
         /// <returns>Area as an integer</returns>
         public int Area()
         {
-            return Side * 2;
+            return Side * Side;
         }
     }
 }
