@@ -11,14 +11,25 @@ namespace Geometry.UnitTests
     [TestFixture]
     public class GeometryTests
     {
+        private Square square;
+        private Rectangle rectangle;
+
+        /// <summary>
+        /// Sets up instances of objects for each test method.
+        /// Using SetUp eliminates the need to reinitialize instances of objects in each test method. 
+        /// </summary>
+        [SetUp]
+        public void SetUp()
+        {
+            square = new Square();
+            rectangle = new Rectangle();
+        }
+
         [Test]
         public void SquareArea_WhenCalled_ReturnsArea()
         {
             // Setup
-            Square square = new Square()
-            {
-                Side = 2
-            };
+            square.Side = 2;
 
             // Execution 
             int square_area = square.Area();
@@ -31,12 +42,8 @@ namespace Geometry.UnitTests
         [Test]
         public void RectangleArea_WhenCalled_ReturnsArea()
         {
-            // Setup
-            Rectangle rectangle = new Rectangle()
-            {
-                Length = 5,
-                Side = 2
-            };
+            rectangle.Length = 5;
+            rectangle.Side = 2;
 
             // Execution
             int rectangle_area = rectangle.Area();
